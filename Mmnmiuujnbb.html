@@ -1,256 +1,34 @@
 
-<html>
+<!DOCTYPE html>
+<html lang="es">	
 <head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CEY759NE42"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-CEY759NE42');
-    </script>
-<title>Untitled Video 1707094304197 | Videy - free and simple video hosting</title>
-<meta name="description" content="Videy is a platform for free and simple video hosting.">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="/css/stylesheet-x22.css">
-<meta property="og:image" content="https://previews.videy.co/07yjHAFt.jpeg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🥵😍chupando sii🥵</title>
 </head>
 <body>
-<div class="nav-outer">
-<div class="nav-inner">
-<div class="logo-text">
-<a href="https://videy.co/">videy</a>
-</div>
-<a href="/">
-<div class="upload-button-nav">
-Upload
-</div>
-</a>
-<div class="legal">
-<div class="legal-menu">
-<a href="javascript:void(0);" class="icon" onclick="toggleMobileNavbar()">
-<i class="fa fa-bars"></i>
-</a>
-</div>
-<div class="legal-item">
-<a href="/privacy">
-Privacy Policy
-</a>
-</div>
-<div class="legal-item">
-<a href="/tos">
-Terms of Service
-</a>
-</div>
-<div class="legal-item">
-<a href="/cdn-cgi/l/email-protection#73000603031c010733051a17160a5d101c">
-Abuse
-</a>
-</div>
-</div>
-</div>
-</div>
-<div id="mobile-menu">
-<a href="/privacy">
-Privacy Policy
-</a>
-<a href="/tos">
-Terms of Service
-</a>
-<a href="/cdn-cgi/l/email-protection#ee9d9b9e9e819c9aae98878a8b97c08d81">
-Abuse
-</a>
-</div>
-<div class="body">
-<div class="video">
-<video autoplay controls width="100%">
-<source src="https://cdn.videy.co/07yjHAFt.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<iframe style="margin-top: 16px; width: 100%; border: none; height: 600px;" src="https://ads2.videy.co/adskeeper/1/"></iframe>
+  <div style="max-width: 100%; overflow: hidden;">
+    <video controls autoplay style="width: 100%;">
+      <source src="https://cdn.videy.co/CCdSRIhs.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+  </div>
+</body>
+</html>
 
-</div>
-</div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
-<script>
-    $(document).ready(function () {
-
-        if ("".length === 0) return;
-
-        const randomString = Math.random().toString(36).substring(2, 10);
-
-        // Specify the URL for the JSON data
-        var apiUrl = 'https://ads.videy.co/api/load.json?site=videy.co&id=' + randomString + '&width=' + screen.width
-        + '&height=' + screen.height;
-
-        // Make a GET request to fetch the JSON data
-        $.ajax({
-            url: apiUrl,
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-
-                var ads = data.ads;
-
-                if (ads.length > 0) {
-                    var firstAd = ads[0];
-
-                    // Update the title
-                    $('.native-unit-title').text(firstAd.headline);
-
-                    // Update the brand
-                    $('.native-unit-brand').text(firstAd.brand);
-
-                    // Update the link
-                    $('.native-unit-link').attr('href', firstAd.url);
-
-                    // Update the image
-                    $('.native-unit-image').attr('src', firstAd.image);
-
-                    // Show the ad unit
-                    $('.native-unit').show();
-                    $('.native-unit-disclosure').show();
-
-                    if (firstAd?.revcontent_id === undefined) { return; }
-
-                    const revcontentId = firstAd.revcontent_id;
-
-                    fetch('https://trends.revcontent.com/api/v2/track.php?d=' + revcontentId);
-
-                    const viewData = new URLSearchParams();
-                    viewData.append('view', decodeURIComponent(revcontentId));
-                    viewData.append('view_type', 'widget');
-                    viewData.append('p[]', 0);
-
-                    fetch(`https://trends.revcontent.com/view.php`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-                        },
-                        body: viewData
-                    });
-
-                }
-
-            },
-            error: function (error) {
-                // Handle errors here
-                console.error('Error fetching JSON:', error);
-            }
-        });
-    });
+<script type="text/javascript">
+	atOptions = {
+		'key' : '4bb23ad0ca78be11759d5dc44a04833f',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/4bb23ad0ca78be11759d5dc44a04833f/invoke.js"></scr' + 'ipt>');
 </script>
-<script>
-    function toggleMobileNavbar() {
-        var x = document.getElementById("mobile-menu");
-        if (x.style.display === "flex") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "flex";
-        }
-    }
-</script>
-<script>
 
-    let target = document.documentElement;
-    let body = document.body;
-    let fileInput = document.getElementById("selectedFile");
 
-    target.addEventListener('dragover', (e) => {
-        if ($(".clickListenerFile")[0]) {
-            e.preventDefault();
-            body.classList.add('dragging');
-        }
-    });
 
-    target.addEventListener('dragleave', () => {
-        body.classList.remove('dragging');
-    });
 
-    target.addEventListener('drop', (e) => {
-        if ($(".clickListenerFile")[0]) {
-            e.preventDefault();
-            body.classList.remove('dragging');
-            fileInput.files = e.dataTransfer.files;
-            upload();
-        }
-    });
 
-    window.addEventListener('paste', e => {
-        fileInput.files = e.clipboardData.files;
-        upload();
-    });
-
-    document.getElementsByClassName("clickListenerFile")[0].onchange = function() {
-        upload();
-    }
-
-    function handleClick() {
-
-        if($(".clickListenerFile")[0]) {
-            $(".clickListenerFile").click();
-        }
-
-    }
-
-    function upload() {
-
-        var fileInput = $("#selectedFile").val();
-        if(fileInput != "" && fileInput.trim() != "") {
-
-            var formData = new FormData($('form')[0]);
-            $(".upload_placeholder .upload-button").hide();
-            $(".upload_placeholder .play").html("<i class=\"fas fa-spinner fa-spin\"></i>");
-            $(".upload_placeholder .instruct").html("Uploading Video...");
-            // $(".select .restraints").toggle();
-            $("#selectedFile").removeClass("clickListenerFile");
-
-            $.ajax({
-                xhr: function() {
-                    var xhr = new window.XMLHttpRequest();
-
-                    xhr.upload.addEventListener("progress", function(evt) {
-                        if (evt.lengthComputable) {
-                            var percentComplete = evt.loaded / evt.total;
-                            percentComplete = parseInt(percentComplete * 100);
-                            $(".upload_placeholder .instruct").html("Uploading Video (" + percentComplete + "%)");
-
-                            if (percentComplete === 100) {
-                                $(".upload_placeholder .instruct").html("Almost done...");
-                            }
-
-                        }
-                    }, false);
-
-                    return xhr;
-                },
-                url: '/api/upload',
-                type: 'POST',
-                context: this,
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false,
-                success: function (result) {
-                    window.location.href = "/v?id=" + result.id;
-                },
-                error: function () {
-                    $(".select .icon").html("<i class=\"fas fa-upload\"></i>");
-                    $(".select .title").html("Select or Paste Video");
-                    $(".select .restraints").toggle();
-                    $("#selectedFile").addClass("clickListenerFile");
-                    $(".upload_placeholder .upload-button").show();
-                }
-            });
-
-        }
-
-    }
-</script>
-	</html>
+<script id="_waus5u">var _wau = _wau || []; _wau.push(["small", "barriofino58", "s5u"]);</script><script async src="//waust.at/s.js"></script>
