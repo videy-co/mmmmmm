@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Llamada grupal entrante</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .call-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-pics {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .profile-pics img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+
+    .call-info {
+      font-size: 1.2em;
+    }
+
+    .button {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .locked {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="call-screen">
+    <h2>Llamada grupal entrante...</h2>
+    <div class="profile-pics">
+      <img src="https://i.imgur.com/0y0y0y0.jpg" alt="Usuario 1">
+      <img src="https://i.imgur.com/0y0y0y0.jpg" alt="Usuario 2">
+      <img src="https://i.imgur.com/0y0y0y0.jpg" alt="Usuario 3">
+    </div>
+    <div class="call-info">Yailin, Tekashi y 2 más están llamando...</div>
+
+    <button id="shareBtn" class="button">Compartir llamada</button>
+    <button id="joinBtn" class="button locked" disabled>Unirse a la llamada</button>
+    <p id="shareCount">Has compartido con 0 personas</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.soundjay.com/phone/telephone-ring-03a.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    let shares = 0;
+    const shareBtn = document.getElementById('shareBtn');
+    const joinBtn = document.getElementById('joinBtn');
+    const shareCount = document.getElementById('shareCount');
+
+    const urlParaCompartir = "https://tusitio.github.io/llamada-simulada/";
+
+    function actualizarContador() {
+      shares++;
+      shareCount.textContent = `Has compartido con ${shares} personas`;
+      if (shares >= 5) {
+        joinBtn.disabled = false;
+        joinBtn.classList.remove('locked');
+      }
+    }
+
+    function compartir() {
+      const mensaje = `Únete a esta videollamada grupal: ${urlParaCompartir}`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: "Llamada Grupal de WhatsApp",
+          text: mensaje,
+          url: urlParaCompartir
+        }).then(() => {
+          actualizarContador();
+        }).catch(() => {
+          alert("No se pudo compartir.");
+        });
+      } else {
+        // Para dispositivos que no soportan navigator.share
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+        window.open(whatsappUrl, "_blank");
+        actualizarContador();
+      }
+    }
+
+    shareBtn.addEventListener('click', compartir);
+
+    joinBtn.addEventListener('click', () => {
+      window.location.href = "https://tusitio.github.io/llamada-simulada/falsa-llamada.html";
+    });
+  </script>
+
+</body>
+</html>
