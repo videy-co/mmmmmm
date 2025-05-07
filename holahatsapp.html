@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Llamada grupal entrante</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enlace a Font Awesome para iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -56,6 +58,46 @@
     .hidden {
       display: none;
     }
+
+    /* Botón flotante de WhatsApp */
+    #whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    #whatsapp a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #25D366;
+      box-shadow: 0 1px 4px rgba(0,0,0,.4);
+      transition: transform 0.3s ease;
+      animation: echoEffect 1.5s ease-in-out infinite;
+    }
+
+    #whatsapp i {
+      font-size: 30px;
+      color: white;
+    }
+
+    @keyframes echoEffect {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 15px 7px rgba(37, 211, 102, 0.4);
+        transform: scale(1.1);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 <body>
@@ -74,6 +116,14 @@
     <p id="shareCount">Has compartido con 0 personas</p>
   </div>
 
+  <!-- Botón flotante de WhatsApp -->
+  <div id="whatsapp">
+    <a href="https://wa.me/?text=Únete%20a%20esta%20videollamada%20grupal:%20https://tusitio.github.io/llamada-simulada/" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Sonido de llamada -->
   <audio autoplay loop>
     <source src="https://www.soundjay.com/phone/telephone-ring-03a.mp3" type="audio/mpeg">
   </audio>
